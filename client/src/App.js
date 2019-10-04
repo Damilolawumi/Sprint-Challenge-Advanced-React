@@ -1,7 +1,8 @@
 import React from 'react';
-import Axios from 'axios';
+import NavBar from './NavBar';
 import Player from './Player';
 import styled from 'styled-components';
+import Axios from 'axios';
 
 const MainDiv = styled.div`
 display: flex;
@@ -28,25 +29,32 @@ class App extends React.Component {
       .then((response) => {
 
         this.setState({
-          players: response.data
+          players: response.data,
         })
-        console.log(response.data);
+        // console.log(response.data);
       })
-
   }
 
 
   render() {
     return (
+      <>
+      <NavBar/>
       <MainDiv>
         {
           this.state.players.map(player => {
-            return <Div>
-              <Player player={player} />
+            return(
+               <Div>
+              
+              <Player player={player}/>
+
+            
             </Div>
+            )
           })
         }
       </MainDiv>
+      </>
     );
   }
 }

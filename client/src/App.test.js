@@ -11,11 +11,23 @@ it('renders without crashing', () => {
 });
 
 
-it('useLocalStorage Component renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<useLocalStorage />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+// it('useLocalStorage Component renders without crashing', () => {
+//   const div = document.createElement('div');
+//   ReactDOM.render(<useLocalStorage />, div);
+//   ReactDOM.unmountComponentAtNode(div);
+// });
+
+// it('useDarkMode Component renders without crashing', () => {
+//   const div = document.createElement('div');
+//   ReactDOM.render(<useDarkMode/>, div);
+//   ReactDOM.unmountComponentAtNode(div);
+// });
+
+// it('NavBar Component renders without crashing', () => {
+//   const div = document.createElement('div');
+//   ReactDOM.render(<NavBar/>, div);
+//   ReactDOM.unmountComponentAtNode(div);
+// });
 
 
 

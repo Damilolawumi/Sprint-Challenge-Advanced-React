@@ -2,11 +2,15 @@ import React from 'react';
 import useLocalSorage from './useLocalStorage';
 import styled from 'styled-components';
 
+
+
 const P = styled.p`
 padding-left: 10px;
 `;
 
-function Player (props) {
+function Player(props) {
+
+
 
     const [player, setPlayers] = useLocalSorage('p', props.player)
 
