@@ -31,7 +31,7 @@ class App extends React.Component {
         this.setState({
           players: response.data,
         })
-        // console.log(response.data);
+        
       })
   }
 
