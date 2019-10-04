@@ -1,6 +1,19 @@
 import React from 'react';
 import Axios from 'axios';
 import Player from './Player';
+import styled from 'styled-components';
+
+const MainDiv = styled.div`
+display: flex;
+    flex-wrap: wrap;
+`;
+
+const Div = styled.div`
+    box-shadow: 2px 1px 4px -1px;
+    width: 220px;
+    background: #f3f3d5;
+    margin: 10px;
+`;
 
 class App extends React.Component {
   constructor(props) {
@@ -25,15 +38,15 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <MainDiv>
         {
           this.state.players.map(player => {
-            return <div>
-              <Player player={player}/>
-            </div>
+            return <Div>
+              <Player player={player} />
+            </Div>
           })
         }
-      </div>
+      </MainDiv>
     );
   }
 }

@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import { useState } from 'react';
 
 const useLocalStorage = (key, initialValue) => {
 
@@ -10,7 +10,8 @@ const useLocalStorage = (key, initialValue) => {
 
     })
 
-
+    // Return a wrapped version of useState's setter function that ...
+    // ... persists the new value to localStorage.
     const setValue = value => {
         setStoredValue(value);
         window.localStorage.setItem(key, JSON.stringify(value));
