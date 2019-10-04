@@ -1,5 +1,10 @@
 import React from 'react';
 import useLocalSorage from './useLocalStorage';
+import styled from 'styled-components';
+
+const P = styled.p`
+padding-left: 10px;
+`;
 
 function Player (props) {
 
@@ -7,10 +12,10 @@ function Player (props) {
 
     return (
         <div>
-            <p>{player.id}</p>
-            <p>{player.name}</p>
-            <p>{player.country}</p>
-            <p>{player.searches}</p>
+            <P>{player.id}</P>
+            <P><h3>{player.name}</h3></P>
+            <P>{player.country}</P>
+            <P>{player.searches}</P>
         </div>
     )
 }
