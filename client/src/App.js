@@ -21,39 +21,38 @@ class App extends React.Component {
     super(props);
     this.state = {
       players: [],
-    }
+    };
   }
 
   componentDidMount() {
     Axios.get('http://localhost:5000/api/players')
       .then((response) => {
-
+        console.log(response);
         this.setState({
           players: response.data,
         })
-        
-      })
+        console.log(response.data);
+      });
   }
 
 
   render() {
     return (
       <>
-      <NavBar/>
-      <MainDiv>
-        {
-          this.state.players.map(player => {
-            return(
-               <Div>
-              
-              <Player player={player}/>
+        <NavBar />
+        <MainDiv>
+          {
+            this.state.players.map(player => {
+              return (
+                <Div>
 
-            
-            </Div>
-            )
-          })
-        }
-      </MainDiv>
+                  <Player player={player} />
+
+                </Div>
+              )
+            })
+          }
+        </MainDiv>
       </>
     );
   }
