@@ -19,4 +19,6 @@ describe('Player Component', () => {
     ReactDOM.render(<Player player={mockPlayerData} />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
+
+  it('')
 });
